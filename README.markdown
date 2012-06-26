@@ -1,6 +1,6 @@
 # codeigniter-notifications
 
-A small but lean notifications library for CodeIgniter.
+A small but lean Nottifications library for CodeIgniter.
 
 ## Usage
 - Copy `libraries/Notifications.php` to your applications' `libraries` folder.
@@ -10,7 +10,8 @@ A small but lean notifications library for CodeIgniter.
 - Generate a notification. `$this->notifications->notify('This is a notification.');`
 - Display static notifications as HTML. `<?php echo $this->notifications->display_html(); ?>`
 - Display dynamic notifications using Javascript. `<?php echo $this->notifications->display_js(); ?>`
- - This will output each of the notifications using `$javascript_template`, and wrap it in `$javascript_wrap`, i.e.
+
+The last statement will return using `$javascript_template`, and wrap it in `$javascript_wrap`, i.e.
 
     <script type=\"text/javascript\">
     /* <![CDATA[ */
@@ -20,12 +21,13 @@ A small but lean notifications library for CodeIgniter.
     /* ]]> */
     </script>
 
-- Please note that if you want to output notifications more than once on a page, you should pass `false` as a parameter to prevent the notification list from being cleared. For example.
+Please note that if you want to output notifications more than once on a page, you should pass `false` as a parameter to prevent the notification list from being cleared. For example.
 
     <?php echo $this->notifications->display_js(); ?>
     
     ... further down the page ...
-    <?php $this->notifications->display_html(); //this will echo nothing, as the notifications have been cleared by the diplay_js() method. ?>
+    <?php $this->notifications->display_html();
+    //this will echo nothing, as the notifications have been cleared by the diplay_js() method. ?>
 
 ## Changelog
 
